@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Módulo 15 JavaScript - Aula 3</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <img src="./imgs/logo-first-in-inbound.png">
+            Especializada em JavaScript
+        </h1>
+        <h2><strong>Tire suas dúvidas!</strong></h2>
+        <p>Preencha o cadastro abaixo e aguarde nosso retorno. Você se surpreenderá com a agilidade e capacitação de nossos atendentes.</p>
+
+        <form id="cadastro">
+            <div>
+                <div style="display: inline-block; width: 40%; margin-right:2%; vertical-align: top;">
+                    <input type="text" placeholder="Nome" class="obrigatorio" name="nome" oninput="nameValidate()">
+                    <div class="mensagem">Nome deve ter mais que três caracteres</div>
+                </div>
+                <div style="display: inline-block; width: 57%; vertical-align: top;">
+                    <input type="text" placeholder="Sobrenome" class="obrigatorio" name="sobrenome" oninput="lastnameValidate()">
+                    <div class="mensagem">Sobrenome deve ter mais que dois caracteres</div>
+                </div>            
+            </div>            
+            <input type="text" placeholder="E-mail" class="obrigatorio" name="email" oninput="emailValidate()">
+            <div class="mensagem">Digite um e-mail válido</div>
+            <input type="text" placeholder="Fone / WhatsApp" class="" name="telefone">
+            <input type="text" placeholder="CEP" class="mascaracep" id="cep" maxlength="9">
+            <input type="text" placeholder="Cidade" class="obrigatorio" name="cidade" onfocusout="cidadeValidate()">
+            <div class="mensagem">O nome da cidade deve estar correto</div>
+            <input type="text" placeholder="Estado" class="mascarauf obrigatorio" name="UF" maxlength="2" onfocusout="ufValidate()">
+            <div class="mensagem">Digite a sigla correta do seu estado</div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+</html>
